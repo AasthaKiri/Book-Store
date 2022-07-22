@@ -10,6 +10,7 @@ body{
     display: grid;
     justify-items: center;
     
+    
 }
 
 nav {
@@ -28,6 +29,7 @@ nav .logo img {
 nav .nav-elements {
     display: flex;
     align-items: center;
+    
 }
 
 nav .nav-elements ul  {
@@ -330,6 +332,10 @@ nav .nav-elements a span {
     line-height: 1.8;
 }
 
+select {
+    background-color: white;
+}
+
 @media (max-width: 750px) {
     .search input {
         width: calc(84% + 8.5px);
@@ -385,6 +391,8 @@ nav .nav-elements a span {
         padding: 18px 0;
     }
 }
+
+
 
 @media (max-width: 500px) {
     nav {

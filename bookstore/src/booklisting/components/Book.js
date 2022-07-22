@@ -5,6 +5,7 @@ import searchlogo from '../../pages/Style-guide/HTML - TatvaSoft/images/search.s
 
 
 
+
 function Book() {
   const [books, setBooks] = useState([]);
   const bookdata = async () => {
@@ -19,14 +20,22 @@ function Book() {
 
   const [search , setSearch] = useState("")
     // console.log(search);
-
+  const [sort,setSort]=useState([])
   
-    const bookSort =  () =>{
-      setBooks(books.sort((a,b) =>{
+  
+    const bookSort = () =>{
+      setSort(books.sort((a,b) =>{
         return a.name.localeCompare(b.name)  
       }));
       console.log(books);
+      setBooks(sort)
     };
+
+    // const bookSort = async() =>{
+    //   await fetch("http://localhost:5000/api/book/sort")
+    //   .then((sortdata) => sortdata.json())
+    //   .then((slist) => {setBooks(slist);console.log(slist);});
+    // }
   
   return (
     <div className="container">
@@ -34,7 +43,6 @@ function Book() {
                     <input type="text" placeholder="What are you looking for..." id='search' onChange={(e) => {setSearch(e.target.value)}} />
                         <div className="btns">
                             <button><img src={searchlogo} alt="" />Search</button>
-                            <button>Cancel</button>
                         </div>
                 </div>
       <div className="loginCreate">
@@ -42,14 +50,15 @@ function Book() {
       </div>
       <div className="sortItems">
         <div className="prodName">
-          Product Name - <span>14366</span> items
+          {/* Product Name - <span>14366</span> items */}
         </div>
         <div className="sortSelect">
-          <p>Sort By</p>
-          <select name="" id="">
+          <p>Sort By : &nbsp;&nbsp; </p>
+          {/* <select name="" id="">
             <option value="a - z" onClick={() => {bookSort()}}>a - z</option>
             <option value="A - Z" onClick={() => {bookSort()}}>A - Z</option>
-          </select>
+          </select> */}
+          <button className="sbtn" on onClick={() => {bookSort()}}> A - Z</button>
         </div>
       </div>
       <div className="gridContainer" >

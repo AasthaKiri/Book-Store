@@ -163,7 +163,7 @@ nav .nav-elements a span {
 }
 
 .loginCreate {
-    padding-bottom: 55px;
+    padding-bottom: 5Fred5px;
 }
 
 .loginCreate h1 {
@@ -229,6 +229,11 @@ hr {
 
 .contain .box .regBtn:hover {
     background-color: #f12933;
+}
+
+.contain .box .regBtn a{
+    text-decoration: none;
+    color: white;
 }
 
 .contain .box form {

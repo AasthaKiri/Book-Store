@@ -1,6 +1,6 @@
 import React from 'react';
 import "./login.css"
-import Currentpage from '../pages/Currentpage';
+// import Currentpage from '../pages/Currentpage';
 import Search from '../pages/Search';
 import { Typography } from '@material-ui/core';
 import Login from './components/Login';
@@ -13,9 +13,9 @@ function LoginPage(){
             <div className='container'>
                 <Navbar />
                 <Search />
-                <Currentpage />
+                {/* <Currentpage /> */}
                 <div className='loginCreate'>
-                    <h1>Login or Create an Account</h1>
+                    <h1>Login </h1>
                 </div>
                 <Login />
                 <div className="footer">

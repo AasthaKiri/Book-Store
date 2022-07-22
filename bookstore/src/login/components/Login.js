@@ -1,5 +1,7 @@
 // import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+
 
 
 function Login(){
@@ -7,7 +9,7 @@ function Login(){
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
     const [login ,setLogin] = useState("")
-
+    // const [status,setStatus] = useState(false)
 
     const onSubmitForm = async e => {
         e.preventDefault();
@@ -18,15 +20,14 @@ function Login(){
           .then((list) => {
             if (list.length>0)
             {
-            setLogin(alert("Logged IN Sucessfully"))
+            setLogin(alert("Logged in Sucessfully"))
+            window.location="http://localhost:3000/books"
             }
             else{
-                console.log("aastha");
+                alert("Try Again")
             }
         })
-          
         } 
-        
         catch (err) {
           console.error(err.message);
         }
@@ -44,7 +45,7 @@ function Login(){
                         <div className="pt">&#9679;&nbsp;Save multiple shipping addresses</div>
                         <div className="pt">&#9679;&nbsp;View and track orders and more</div>
                     </div>
-                    <button className="regBtn">Create an Account</button>
+                    <button className="regBtn" ><Link to='/register'>Create New Account</Link></button>
                 </div>
                 <div className="box">
                     <div className="title">Registered Customers</div>
@@ -52,6 +53,7 @@ function Login(){
                     <div className="des">If you have an account with us, please log in.</div>
                     <form action="" onSubmit={onSubmitForm}>
                     {login}
+                    
                         <div className="loginInput">Email Address *</div>
                         <input type="email" className="email" id='email' onChange={(e) => {setEmail(e.target.value)}}value={email} />
                         <div className="loginInput">Password *</div>

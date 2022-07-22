@@ -13,7 +13,7 @@ function Search() {
                     <input type="text" placeholder="What are you looking for..." id='search' onChange={(e) => {setSearch(e.target.value)}} />
                         <div className="btns">
                             <button><img src={searchlogo} alt="" />Search</button>
-                            <button>Cancel</button>
+                            
                         </div>
                 </div>
             </>

@@ -5,6 +5,7 @@ import RegisterPage from "./register";
 import LoginPage from "./login";
 import {BrowserRouter as Router , Route, Routes ,Link} from 'react-router-dom'
 import CartPage from "./cart";
+import Homepage from "./homepage";
 
 
 function App() {
@@ -15,8 +16,9 @@ return(
     <Routes>
       <Route exact path="/login" element={ <LoginPage/> }/>
       <Route exact path="/register" element={ <RegisterPage /> }/>
-      <Route exact path="/" element={ <BookListing /> }/>
+      <Route exact path="/books" element={ <BookListing /> }/>
       <Route exact path="/cart" element={<CartPage/>}/>
+      <Route exact path="/" element={<Homepage/>}/>
     </Routes>
   </Router>
 

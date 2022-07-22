@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import React from 'react';
 import Navbar from '../pages/Navbar';
-import Currentpage from '../pages/Currentpage'
+// import Currentpage from '../pages/Currentpage'
 import Register from './components/Register';
 import "./register.css";
 import Search from '../pages/Search';
@@ -10,12 +10,13 @@ import Search from '../pages/Search';
 function RegisterPage () {
 
   return (
+    
     <div className='container'>
       <Navbar />
       <Search />
-      <Currentpage />
+      {/* <Currentpage /> */}
       <div className="loginCreate">
-        <h1>Login or Create an Account</h1>
+        <h1>Create an Account</h1>
       </div>
       <Register />
       <div className="footer">

@@ -12,11 +12,10 @@ function Register() {
   const onSubmitForm = async e => {
     e.preventDefault();
     try {
-      const body = {fname,lname,email,roleid,password}
-      const response = await fetch(" http://localhost:5000/api/user/add" , {method:"POST" , headers:{"Content-Type" :"application/json"}, body:JSON.stringify(body)} )
+      const body = {fname,lname,email,password,roleid}
+      const response = await fetch("http://localhost:5000/api/user/add" , {method:"POST" , headers:{"Content-Type" :"application/json"}, body:JSON.stringify(body)} )
       console.log(response);
     } 
-    
     catch (err) {
       console.error(err.message);
     }
